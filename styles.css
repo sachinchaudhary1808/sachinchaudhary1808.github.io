@@ -1,0 +1,225 @@
+/* Tokyo Night Enhanced Theme */
+:root {
+  /* Core colors */
+  --bg: #1a1b26;
+  --fg: #a9b1d6;
+  --accent: #7aa2f7;
+  --accent-soft: #bb9af7;
+  --header: #73daca;
+  --subtle: #414868;
+  --card-bg: #1f2335;
+
+  /* Extended palette */
+  --error: #f7768e;
+  --warning: #e0af68;
+  --success: #9ece6a;
+  --info: #2ac3de;
+
+  /* UI Elements */
+  --prompt: #73daca;
+  --link-hover: #bb9af7;
+  --tree-lines: #414868;
+
+  /* Shadows & Effects */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+  --glow: 0 0 10px rgba(122, 162, 247, 0.2);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  color: var(--fg);
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header & Navigation */
+.prompt-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-char {
+  color: var(--prompt);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+.status-bar {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Navigation Links */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: var(--subtle);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Project Tree */
+.tree-view {
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.5;
+  color: var(--fg);
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--tree-lines);
+}
+
+.file-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.file-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Glass Card Effect */
+.glass {
+  background: rgba(31, 35, 53, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+/* Terminal Elements */
+.terminal-prompt {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--header);
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: "JetBrains Mono", monospace;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+footer .heart {
+  color: var(--error);
+  display: inline-block;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .status-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .glass {
+    padding: 1.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .glass {
+    background: white;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  body {
+    color: black;
+    background: white;
+  }
+}

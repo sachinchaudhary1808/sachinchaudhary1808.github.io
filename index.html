@@ -5,236 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sachin Chaudhary's personal blog - Linux enthusiast and C programmer"
+      content="Sachin Chaudhary - Unix enthusiast and C programmer"
     />
-    <title>~/sachin/blog</title>
-    <style>
-      :root {
-        /* Tokyo Night inspired colors */
-        --bg: #1a1b26;
-        --fg: #a9b1d6;
-        --accent: #7aa2f7;
-        --accent-soft: #bb9af7;
-        --header: #73daca;
-        --subtle: #414868;
-        --card-bg: #1f2335;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background-color: var(--bg);
-        color: var(--fg);
-        font-family: "JetBrains Mono", "Fira Code", monospace;
-        line-height: 1.7;
-        max-width: 850px;
-        margin: 0 auto;
-        padding: 2rem 1.5rem;
-      }
-
-      header {
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: var(--card-bg);
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: var(--header);
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
-      .terminal-prompt::before {
-        content: "λ ";
-        color: var(--accent);
-        font-weight: bold;
-      }
-
-      article {
-        background: var(--card-bg);
-        padding: 2rem;
-        margin: 2rem 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease;
-      }
-
-      article:hover {
-        transform: translateY(-2px);
-      }
-
-      .links {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-      }
-
-      .links a {
-        padding: 0.5rem 1rem;
-        background: var(--subtle);
-        border-radius: 6px;
-        transition: all 0.2s ease;
-      }
-
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: var(--accent-soft);
-        background: var(--subtle);
-        transform: translateY(-2px);
-      }
-
-      .skills {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-      }
-
-      .skill-tag {
-        background: var(--subtle);
-        padding: 0.4rem 1rem;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
-      }
-
-      .skill-tag:hover {
-        background: var(--accent);
-        color: var(--bg);
-        transform: scale(1.05);
-      }
-
-      ul {
-        list-style-type: none;
-        padding-left: 1rem;
-      }
-
-      li::before {
-        content: "→";
-        color: var(--accent);
-        margin-right: 0.5rem;
-      }
-
-      pre {
-        background: var(--bg);
-        padding: 1.5rem;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin: 1rem 0;
-        border: 1px solid var(--subtle);
-      }
-
-      footer {
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 2px solid var(--subtle);
-        text-align: center;
-        font-size: 0.9rem;
-        color: var(--fg);
-      }
-
-      @media (max-width: 600px) {
-        body {
-          padding: 1rem;
-        }
-
-        header,
-        article {
-          padding: 1.5rem;
-        }
-
-        .links {
-          gap: 1rem;
-        }
-      }
-
-      /* Glass morphism effect for cards */
-      .glass {
-        background: rgba(31, 35, 53, 0.8);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
-    </style>
+    <title>~/sachin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="glass">
-      <h1 class="terminal-prompt">~/sachin/blog</h1>
-      <p>Welcome to my digital garden 🌱 | Unix enthusiast | C programmer</p>
-      <div class="links">
-        <a href="https://github.com/sachinchaudhary1808">GitHub</a>
-        <a href="mailto:chaudharysachinasachin@gmail.com">Email</a>
+      <div class="prompt-container">
+        <span class="prompt-char">λ</span>
+        <h1 class="terminal-prompt">/home/sachin</h1>
       </div>
+
+      <div class="status-bar">
+        <span class="status-item">uptime: always coding</span>
+        <span class="status-item">location: India</span>
+        <span class="status-item">stack: C, Unix</span>
+      </div>
+
+      <p class="intro">
+        Welcome to my digital garden <span class="emoji">🌱</span>
+      </p>
+
+      <nav class="links">
+        <a href="blog.html" class="nav-link">cd ~/blog</a>
+        <a href="blog.index" class="nav-link">github</a>
+        <a href="mailto:chaudharysachinasachin@gmail.com" class="nav-link"
+          >email</a
+        >
+      </nav>
     </header>
 
-    <main>
+    <main class="content">
       <article class="glass">
-        <h2 class="terminal-prompt">whoami</h2>
+        <h2 class="terminal-prompt">cat about.txt</h2>
         <p>
-          Hello, I'm Sachin Chaudhary from India. I'm passionate about the Unix
-          philosophy, minimal computing, and writing efficient code. Currently
-          diving deep into C programming and command-line tools development.
+          Unix enthusiast and systems programmer focused on minimal, efficient
+          solutions. Currently exploring the depths of C and Unix internals
+          while building useful CLI tools.
         </p>
-        <div class="skills">
-          <span class="skill-tag">C</span>
-          <span class="skill-tag">Linux</span>
-          <span class="skill-tag">Bash</span>
-          <span class="skill-tag">Nix</span>
-          <span class="skill-tag">Vim</span>
-        </div>
-      </article>
-
-      <article class="glass">
-        <h2 class="terminal-prompt">current_projects</h2>
-        <pre>
-.
-├── cli-tools/
-│   ├── file-organizer
-│   └── system-monitor
-└── learning/
-    ├── c-programming/
-    └── unix-internals/</pre
-        >
-      </article>
-
-      <article class="glass">
-        <h2 class="terminal-prompt">latest_thoughts</h2>
-        <p>
-          Welcome to my blog! Here I'll be documenting my journey through the
-          world of Unix-like systems, sharing coding experiences, and discussing
-          minimalist software philosophy. Expect posts about C programming, CLI
-          tools, and the occasional Linux configuration guide.
-        </p>
-      </article>
-
-      <article class="glass">
-        <h2 class="terminal-prompt">setup</h2>
-        <p>My current development environment:</p>
-        <ul>
-          <li>OS: NixOS</li>
-          <li>Editor: Neovim</li>
-          <li>Terminal: foot</li>
-          <li>Shell: bash</li>
-          <li>WM: sway</li>
-        </ul>
       </article>
     </main>
 
-    <footer>
-      <p>Created with ❤️ using vanilla HTML/CSS | © 2024 Sachin Chaudhary</p>
-      <p><small>No JavaScript was harmed in the making of this blog</small></p>
+    <footer class="glass">
+      <p>
+        $ echo "Made with <span class="heart">❤️</span> using pure HTML/CSS"
+      </p>
+      <small class="terminal-prompt">© chmod 755 sachin 2024</small>
     </footer>
   </body>
 </html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sachin Chaudhary's Blog - Unix and C Programming"
+    />
+    <title>~/blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="glass">
+      <div class="prompt-container">
+        <span class="prompt-char">λ</span>
+        <h1 class="terminal-prompt">~/blog</h1>
+      </div>
+
+      <nav class="links">
+        <a href="index.html" class="nav-link">cd ~</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article class="glass">
+        <h2 class="terminal-prompt">whoami</h2>
+        <div class="content-body">
+          <p>
+            Hello, I'm Sachin Chaudhary from India. I'm passionate about the
+            Unix philosophy, minimal computing, and writing efficient code.
+            Currently diving deep into C programming and command-line tools
+            development.
+          </p>
+        </div>
+      </article>
+
+      <article class="glass project-tree">
+        <h2 class="terminal-prompt">tree ~/projects</h2>
+        <pre class="tree-view">
+.
+├── cli-tools/
+│   ├── file-organizer/
+│   │   └── <a href="#" class="file-link">main.c</a>
+│   └── system-monitor/
+│       └── <a href="#" class="file-link">monitor.c</a>
+└── learning/
+    ├── c-programming/
+    │   ├── <a href="#" class="file-link">data-structures.c</a>
+    │   └── <a href="#" class="file-link">algorithms.c</a>
+    └── unix-internals/
+        └── <a href="#" class="file-link">shell.c</a></pre>
+      </article>
+    </main>
+
+    <footer class="glass">
+      <p>
+        $ echo "Made with <span class="heart">❤️</span> using pure HTML/CSS"
+      </p>
+      <small class="terminal-prompt">© chmod 755 sachin 2024</small>
+    </footer>
+  </body>
+</html>
