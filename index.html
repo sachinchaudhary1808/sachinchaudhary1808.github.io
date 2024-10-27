@@ -1,37 +1,169 @@
-<!doctype html>
+/<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sachin Chaudhary's personal blog" />
-    <title>Sachin's Blog</title>
+    <meta
+      name="description"
+      content="Sachin Chaudhary's personal blog - Linux enthusiast and C programmer"
+    />
+    <title>~/sachin/blog</title>
+    <style>
+      :root {
+        --bg: #282c34;
+        --fg: #abb2bf;
+        --accent: #98c379;
+        --secondary: #61afef;
+        --header: #c678dd;
+        --subtle: #4b5263;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family: "Courier New", monospace;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      header {
+        border-bottom: 2px solid var(--subtle);
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--header);
+      }
+
+      .terminal-prompt::before {
+        content: "$ ";
+        color: var(--accent);
+      }
+
+      article {
+        background: #2c313a;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 3px solid var(--accent);
+      }
+
+      .links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      a {
+        color: var(--secondary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: var(--accent);
+      }
+
+      .skills {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .skill-tag {
+        background: var(--subtle);
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 2px solid var(--subtle);
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      pre {
+        background: #21252b;
+        padding: 1rem;
+        overflow-x: auto;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Coco's blog...</h1>
-      <p>Welcome! | Sharing my thoughts and experiences.</p>
+      <h1 class="terminal-prompt">~/sachin/blog</h1>
+      <p>Welcome to my digital garden 🌱 | Unix enthusiast | C programmer</p>
+      <div class="links">
+        <a href="https://github.com/yourusername">GitHub</a>
+        <a href="https://matrix.to/#/@yourusername:matrix.org">Matrix</a>
+        <a href="mailto:your@email.com">Email</a>
+        <a href="rss.xml">RSS</a>
+      </div>
     </header>
 
     <main>
       <article>
-        <h2>My First Blog Post</h2>
+        <h2 class="terminal-prompt">whoami</h2>
         <p>
-          Welcome to my blog! I'll be sharing insights, thoughts, and
-          experiences here.
+          Hello, I'm Sachin Chaudhary from India. I'm passionate about the Unix
+          philosophy, minimal computing, and writing efficient code. Currently
+          diving deep into C programming and command-line tools development.
+        </p>
+        <div class="skills">
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Nix</span>
+          <span class="skill-tag">Vim</span>
+        </div>
+      </article>
+
+      <article>
+        <h2 class="terminal-prompt">current_projects</h2>
+        <pre>
+.
+├── cli-tools/
+│   ├── file-organizer
+│   └── system-monitor
+└── learning/
+    ├── c-programming/
+    └── unix-internals/</pre
+        >
+      </article>
+
+      <article>
+        <h2 class="terminal-prompt">latest_thoughts</h2>
+        <p>
+          Welcome to my blog! Here I'll be documenting my journey through the
+          world of Unix-like systems, sharing coding experiences, and discussing
+          minimalist software philosophy. Expect posts about C programming, CLI
+          tools, and the occasional Linux configuration guide.
         </p>
       </article>
 
       <article>
-        <h2>Who i'm ?</h2>
-        <p>
-          My name is sachin chaudhary, i'm from india, i like linux and nix
-          ecosystem, curruntly learning c and some cli stuff.
-        </p>
+        <h2 class="terminal-prompt">setup</h2>
+        <p>My current development environment:</p>
+        <ul>
+          <li>OS: NixOS</li>
+          <li>Editor: Neovim</li>
+          <li>Terminal: st</li>
+          <li>Shell: zsh</li>
+          <li>WM: dwm</li>
+        </ul>
       </article>
     </main>
 
     <footer>
-      <p>© 2024 Sachin Chaudhary. All rights reserved.</p>
+      <p>Created with ❤️ using vanilla HTML/CSS | © 2024 Sachin Chaudhary</p>
+      <p><small>No JavaScript was harmed in the making of this blog</small></p>
     </footer>
   </body>
 </html>
+html>
