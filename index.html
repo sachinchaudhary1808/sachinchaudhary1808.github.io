@@ -10,103 +10,177 @@
     <title>~/sachin/blog</title>
     <style>
       :root {
-        --bg: #282c34;
-        --fg: #abb2bf;
-        --accent: #98c379;
-        --secondary: #61afef;
-        --header: #c678dd;
-        --subtle: #4b5263;
+        /* Tokyo Night inspired colors */
+        --bg: #1a1b26;
+        --fg: #a9b1d6;
+        --accent: #7aa2f7;
+        --accent-soft: #bb9af7;
+        --header: #73daca;
+        --subtle: #414868;
+        --card-bg: #1f2335;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       body {
         background-color: var(--bg);
         color: var(--fg);
-        font-family: "Courier New", monospace;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 0 1rem;
+        font-family: "JetBrains Mono", "Fira Code", monospace;
+        line-height: 1.7;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
       }
 
       header {
-        border-bottom: 2px solid var(--subtle);
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       }
 
       h1,
       h2,
       h3 {
         color: var(--header);
+        margin-bottom: 1rem;
+        font-weight: 600;
       }
 
       .terminal-prompt::before {
-        content: "$ ";
+        content: "λ ";
         color: var(--accent);
+        font-weight: bold;
       }
 
       article {
-        background: #2c313a;
-        padding: 1rem;
-        margin: 1rem 0;
-        border-left: 3px solid var(--accent);
+        background: var(--card-bg);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+      }
+
+      article:hover {
+        transform: translateY(-2px);
       }
 
       .links {
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
         flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .links a {
+        padding: 0.5rem 1rem;
+        background: var(--subtle);
+        border-radius: 6px;
+        transition: all 0.2s ease;
       }
 
       a {
-        color: var(--secondary);
+        color: var(--accent);
         text-decoration: none;
       }
 
       a:hover {
-        text-decoration: underline;
-        color: var(--accent);
+        color: var(--accent-soft);
+        background: var(--subtle);
+        transform: translateY(-2px);
       }
 
       .skills {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
+        margin-top: 1rem;
       }
 
       .skill-tag {
         background: var(--subtle);
-        padding: 0.2rem 0.5rem;
-        border-radius: 3px;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
       }
 
-      footer {
-        margin-top: 2rem;
-        padding-top: 1rem;
-        border-top: 2px solid var(--subtle);
-        text-align: center;
-        font-size: 0.9rem;
+      .skill-tag:hover {
+        background: var(--accent);
+        color: var(--bg);
+        transform: scale(1.05);
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 1rem;
+      }
+
+      li::before {
+        content: "→";
+        color: var(--accent);
+        margin-right: 0.5rem;
       }
 
       pre {
-        background: #21252b;
-        padding: 1rem;
+        background: var(--bg);
+        padding: 1.5rem;
+        border-radius: 8px;
         overflow-x: auto;
+        margin: 1rem 0;
+        border: 1px solid var(--subtle);
+      }
+
+      footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--subtle);
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--fg);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+
+        header,
+        article {
+          padding: 1.5rem;
+        }
+
+        .links {
+          gap: 1rem;
+        }
+      }
+
+      /* Glass morphism effect for cards */
+      .glass {
+        background: rgba(31, 35, 53, 0.8);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
       }
     </style>
   </head>
   <body>
-    <header>
+    <header class="glass">
       <h1 class="terminal-prompt">~/sachin/blog</h1>
       <p>Welcome to my digital garden 🌱 | Unix enthusiast | C programmer</p>
       <div class="links">
         <a href="https://github.com/sachinchaudhary1808">GitHub</a>
-        <a href="chaudharysachinasachin@gmail.com">Email</a>
+        <a href="mailto:chaudharysachinasachin@gmail.com">Email</a>
       </div>
     </header>
 
     <main>
-      <article>
+      <article class="glass">
         <h2 class="terminal-prompt">whoami</h2>
         <p>
           Hello, I'm Sachin Chaudhary from India. I'm passionate about the Unix
@@ -122,7 +196,7 @@
         </div>
       </article>
 
-      <article>
+      <article class="glass">
         <h2 class="terminal-prompt">current_projects</h2>
         <pre>
 .
@@ -135,7 +209,7 @@
         >
       </article>
 
-      <article>
+      <article class="glass">
         <h2 class="terminal-prompt">latest_thoughts</h2>
         <p>
           Welcome to my blog! Here I'll be documenting my journey through the
@@ -145,7 +219,7 @@
         </p>
       </article>
 
-      <article>
+      <article class="glass">
         <h2 class="terminal-prompt">setup</h2>
         <p>My current development environment:</p>
         <ul>
