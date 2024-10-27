@@ -60,6 +60,43 @@ body {
   margin-top: 5px; /* Adjust the value as needed */
 }
 
+/* Base Styles for All Links */
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: var(--subtle);
+  color: var(--fg);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--tree-lines);
+}
+
+/* Style for Internal Link (Blog) */
+.internal-link {
+  color: var(--accent-soft); /* Unique color for internal link */
+}
+
+.internal-link:hover {
+  background: var(--accent-soft); /* Soft hover effect */
+  color: var(--bg); /* Text color for contrast */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for External Links (Email, GitHub) */
+.external-link {
+  color: var(--accent); /* Unique color for external links */
+}
+
+.external-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .prompt-char {
   color: var(--prompt);
   font-family: "JetBrains Mono", monospace;
