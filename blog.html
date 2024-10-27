@@ -3,33 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sachin Chaudhary's Blog - Unix and C Programming"
-    />
-    <title>~/blog</title>
+    <title>Sachin's Blog</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <header class="glass">
-      <div class="prompt-container">
-        <span class="prompt-char">λ</span>
-        <h1 class="terminal-prompt">~/blog</h1>
-      </div>
+    <main>
+      <!-- Header Section -->
+      <section class="glass">
+        <div class="prompt-container">
+          <span class="prompt-char">λ</span>
+          <h1 id="blog" class="terminal-prompt">~/blog</h1>
+        </div>
 
-      <nav class="links">
-        <a href="index.html" class="nav-link">cd ~</a>
-      </nav>
-    </header>
+        <nav class="nav-container">
+          <a href="index.html" class="nav-link internal-link">cd ~</a>
+        </nav>
+      </section>
 
-    <main class="content">
-      <article class="glass">
-        <h2 class="terminal-prompt">whoami</h2>
+      <!-- About Me Section -->
+      <section class="glass">
+        <div class="section-header">
+          <h2 id="whoami" class="terminal-prompt">whoami</h2>
+        </div>
+
         <div class="content-body">
           <p>
             Hello, I'm Sachin Chaudhary from India. I'm passionate about the
@@ -38,31 +34,62 @@
             development.
           </p>
         </div>
-      </article>
+      </section>
 
-      <article class="glass project-tree">
-        <h2 class="terminal-prompt">tree ~/projects</h2>
-        <pre class="tree-view">
-.
-├── cli-tools/
-│   ├── file-organizer/
-│   │   └── <a href="#" class="file-link">main.c</a>
-│   └── system-monitor/
-│       └── <a href="#" class="file-link">monitor.c</a>
-└── learning/
-    ├── c-programming/
-    │   ├── <a href="#" class="file-link">data-structures.c</a>
-    │   └── <a href="#" class="file-link">algorithms.c</a>
-    └── unix-internals/
-        └── <a href="#" class="file-link">shell.c</a></pre>
-      </article>
+      <!-- Projects Section -->
+      <section class="glass">
+        <div class="section-header">
+          <h2 id="projects" class="terminal-prompt">tree ~/projects</h2>
+        </div>
+
+        <div class="project-tree">
+          <div class="tree-view">
+            <div class="directory">
+              <span class="dir-name">cli-tools</span>
+              <div class="tree-content">
+                <div class="directory">
+                  <span class="dir-name">file-organizer</span>
+                  <div class="tree-content">
+                    <a href="#" class="file-link">main.c</a>
+                  </div>
+                </div>
+                <div class="directory">
+                  <span class="dir-name">system-monitor</span>
+                  <div class="tree-content">
+                    <a href="#" class="file-link">monitor.c</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="directory">
+              <span class="dir-name">learning</span>
+              <div class="tree-content">
+                <div class="directory">
+                  <span class="dir-name">c-programming</span>
+                  <div class="tree-content">
+                    <a href="#" class="file-link">data-structures.c</a>
+                    <a href="#" class="file-link">algorithms.c</a>
+                  </div>
+                </div>
+                <div class="directory">
+                  <span class="dir-name">unix-internals</span>
+                  <div class="tree-content">
+                    <a href="#" class="file-link">shell.c</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="glass">
+    <footer>
       <p>
         $ echo "Made with <span class="heart">❤️</span> using pure HTML/CSS"
       </p>
-      <small class="terminal-prompt">© chmod 755 sachin 2024</small>
+      <p class="small">© chmod 755 sachin 2024</p>
     </footer>
   </body>
 </html>
+html>
