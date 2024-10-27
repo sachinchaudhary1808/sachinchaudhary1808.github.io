@@ -56,6 +56,9 @@ body {
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
+.links {
+  margin-top: 5px; /* Adjust the value as needed */
+}
 
 .prompt-char {
   color: var(--prompt);
