@@ -3,92 +3,200 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sachin's Blog</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>coco's garden ~ blog</title>
+    <style>
+      :root {
+        --bg: #1a2421;
+        --text: #9ab8b0;
+        --accent: #4a7260;
+        --leaf: #68a690;
+        --soil: #2c1810;
+        --flower: #c9a7bf;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Courier New", monospace;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        min-height: 100vh;
+        background-image: radial-gradient(
+            circle at 20% 20%,
+            rgba(74, 114, 96, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(74, 114, 96, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .garden {
+        border: 2px solid var(--leaf);
+        padding: 2rem;
+        border-radius: 12px;
+        background: rgba(26, 36, 33, 0.8);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .blog-post {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border-left: 3px solid var(--leaf);
+        background: rgba(44, 24, 16, 0.2);
+        border-radius: 0 8px 8px 0;
+        transition: all 0.3s ease;
+      }
+
+      .blog-post:hover {
+        border-left-width: 6px;
+        transform: translateX(5px);
+      }
+
+      .post-title {
+        color: var(--leaf);
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .post-date {
+        color: var(--flower);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .post-preview {
+        margin-bottom: 1rem;
+      }
+
+      .read-more {
+        color: var(--leaf);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--leaf);
+        transition: all 0.3s ease;
+      }
+
+      .read-more:hover {
+        color: var(--flower);
+        border-bottom-color: var(--flower);
+      }
+
+      .blog-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .back-home {
+        color: var(--text);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--leaf);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 2rem;
+      }
+
+      .back-home:hover {
+        background: var(--leaf);
+        color: var(--bg);
+      }
+
+      .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .tag {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+        background: rgba(74, 114, 96, 0.2);
+        border-radius: 12px;
+        border: 1px solid var(--leaf);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+        .garden {
+          padding: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <!-- Header Section -->
-      <section class="glass">
-        <div class="prompt-container">
-          <span class="prompt-char">λ</span>
-          <h1 id="blog" class="terminal-prompt">~/blog</h1>
+    <div class="container">
+      <div class="garden">
+        <div class="blog-header">
+          <h1>~ digital garden notes ~</h1>
+          <p>thoughts growing in the unix wilderness</p>
         </div>
 
-        <nav class="nav-container">
-          <a href="index.html" class="nav-link internal-link">cd ~</a>
-        </nav>
-      </section>
-
-      <!-- About Me Section -->
-      <section class="glass">
-        <div class="section-header">
-          <h2 id="whoami" class="terminal-prompt">whoami</h2>
-        </div>
-
-        <div class="content-body">
-          <p>
-            Hello, I'm Sachin Chaudhary from India. I'm passionate about the
-            Unix philosophy, minimal computing, and writing efficient code.
-            Currently diving deep into C programming and command-line tools
-            development.
-          </p>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="glass">
-        <div class="section-header">
-          <h2 id="projects" class="terminal-prompt">tree ~/projects</h2>
-        </div>
-
-        <div class="project-tree">
-          <div class="tree-view">
-            <div class="directory">
-              <span class="dir-name">cli-tools</span>
-              <div class="tree-content">
-                <div class="directory">
-                  <span class="dir-name">file-organizer</span>
-                  <div class="tree-content">
-                    <a href="#" class="file-link">main.c</a>
-                  </div>
-                </div>
-                <div class="directory">
-                  <span class="dir-name">system-monitor</span>
-                  <div class="tree-content">
-                    <a href="#" class="file-link">monitor.c</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="directory">
-              <span class="dir-name">learning</span>
-              <div class="tree-content">
-                <div class="directory">
-                  <span class="dir-name">c-programming</span>
-                  <div class="tree-content">
-                    <a href="#" class="file-link">data-structures.c</a>
-                    <a href="#" class="file-link">algorithms.c</a>
-                  </div>
-                </div>
-                <div class="directory">
-                  <span class="dir-name">unix-internals</span>
-                  <div class="tree-content">
-                    <a href="#" class="file-link">shell.c</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="blog-post">
+          <div class="post-title">🌱 My Journey to NixOS</div>
+          <div class="post-date">~ planted on october 15, 2024 ~</div>
+          <div class="post-preview">
+            Found myself wandering through different Linux distributions like a
+            seed in the wind, until I discovered NixOS. Here's how its unique
+            approach to package management and system configuration changed my
+            perspective on operating systems...
+          </div>
+          <a href="#" class="read-more">read more →</a>
+          <div class="tags">
+            <span class="tag">nixos</span>
+            <span class="tag">linux</span>
+            <span class="tag">configuration</span>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="glass">
-      <p>
-        $ echo "Made with <span class="heart">❤️</span> using pure HTML/CSS"
-      </p>
-      <p class="terminal-prompt">© chmod 755 sachin 2024</p>
-    </footer>
+        <div class="blog-post">
+          <div class="post-title">
+            🌿 Building a Minimal Development Environment
+          </div>
+          <div class="post-date">~ planted on october 10, 2024 ~</div>
+          <div class="post-preview">
+            Like tending to a bonsai tree, crafting the perfect development
+            environment requires patience and careful pruning. Here's my
+            approach to creating a minimal yet powerful setup using only
+            essential tools...
+          </div>
+          <a href="#" class="read-more">read more →</a>
+          <div class="tags">
+            <span class="tag">unix</span>
+            <span class="tag">minimalism</span>
+            <span class="tag">workflow</span>
+          </div>
+        </div>
+
+        <div class="blog-post">
+          <div class="post-title">🍃 Unix Philosophy in Daily Computing</div>
+          <div class="post-date">~ planted on october 5, 2024 ~</div>
+          <div class="post-preview">
+            The Unix philosophy is like the natural laws of computing - simple,
+            composable, and elegant. Here's how I apply these principles to
+            create efficient workflows and maintainable systems...
+          </div>
+          <a href="#" class="read-more">read more →</a>
+          <div class="tags">
+            <span class="tag">unix</span>
+            <span class="tag">philosophy</span>
+            <span class="tag">productivity</span>
+          </div>
+        </div>
+
+        <a href="#" class="back-home">← return to garden</a>
+      </div>
+    </div>
   </body>
 </html>
