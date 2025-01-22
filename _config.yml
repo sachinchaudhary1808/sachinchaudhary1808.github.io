@@ -1,4 +1,16 @@
-title: My Website
-description: Welcome to my website!
-theme: minima # You can choose any supported theme
+title: Coco's Space
+description: Me, Linux, and programming.
+theme: minima
+baseurl: "" # Leave blank for GitHub Pages
+url: "https://coco.github.io" # Replace with your URL
 markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+author:
+  name: Sachin Chaudhary
+  email: chaudharysachinasachin@gmail.com # Optional
+social_links: # Replace with your actual links
+  - https://github.com/sachinchaudhary1808
