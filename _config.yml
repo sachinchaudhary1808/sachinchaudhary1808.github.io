@@ -1,0 +1,4 @@
+title: My Website
+description: Welcome to my website!
+theme: minima # You can choose any supported theme
+markdown: kramdown
