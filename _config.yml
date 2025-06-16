@@ -1,16 +1,5 @@
-title: Coco's Space
-description: Me, Linux, and programming.
 theme: minima
-baseurl: "" # Leave blank for GitHub Pages
-url: "https://coco.github.io" # Replace with your URL
+title: Sachin Chaudhary
 markdown: kramdown
-highlighter: rouge
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-author:
-  name: Sachin Chaudhary
-  email: chaudharysachinasachin@gmail.com # Optional
-social_links:
-  - https://github.com/sachinchaudhary1808
+permalink: /:name.html
+
