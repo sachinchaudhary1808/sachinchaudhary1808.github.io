@@ -11,11 +11,13 @@ This repository hosts my minimalist personal website, designed for GitHub Pages.
 ## How to Use
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/sachinchaudhary1808/sachinchaudhary1808.github.io.git
    ```
 
 2. Navigate to the repository and preview the website locally:
+
    ```bash
    cd sachinchaudhary1808.github.io
    bundle exec jekyll serve
@@ -26,4 +28,3 @@ This repository hosts my minimalist personal website, designed for GitHub Pages.
 ## License
 
 This project is open-source and available under the MIT License.
-
